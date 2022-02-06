@@ -31,7 +31,7 @@
   z-index: -1;
 }
 .header-content {
-  width: 1200px;
+  max-width: 1200px;
 
   padding: 28px 15px 147px 15px;
   margin: auto;
@@ -83,7 +83,7 @@
   margin-top: 127px;
 }
 .article-trend {
-  width: 1660px;
+  max-width: 1660px;
   margin: auto;
 }
 .conteiner-box {
@@ -140,7 +140,7 @@
   display: flex;
   gap: 120px;
 
-  width: 1200px;
+  max-width: 1200px;
 
   padding-left: 15px;
   padding-right: 15px;
@@ -519,7 +519,7 @@
   padding-right: 15px;
 }
 .social-network {
-  width: 1200px;
+  max-width: 1200px;
   padding-top: 31px;
   padding-bottom: 31px;
 
