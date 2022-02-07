@@ -83,7 +83,7 @@
   margin-top: 127px;
 }
 .article-trend {
-  width: 100%;
+  max-width: 1660px;
   margin: auto;
 }
 .conteiner-box {
