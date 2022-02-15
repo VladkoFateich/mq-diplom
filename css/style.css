@@ -77,13 +77,13 @@
   text-align: center;
   text-transform: uppercase;
 
-  width: 680px;
+  width: 687px;
 
   margin: auto;
   margin-top: 127px;
 }
-.article-trend {
-  max-width: 1660px;
+.section-trend {
+  width: 100%;
   margin: auto;
 }
 .conteiner-box {
@@ -100,7 +100,7 @@
   position: relative;
   z-index: 0;
   padding: 134px 20px 15px 20px;
-  width: 414px;
+  width: 100%;
   display: flex;
   align-items: flex-end;
 }
@@ -132,6 +132,7 @@
   border: 3px solid #b59f5b;
 
   padding: 39px 40px 37px 34px;
+  width: 100%;
 }
 .trend-box .trend {
   color: #ffffff;
@@ -156,11 +157,10 @@
 }
 .content-box {
   display: flex;
-  align-items: flex-start;
   gap: 30px;
 }
 .content-image {
-  width: 381px;
+  width: 100%;
 }
 .box {
   display: flex;
@@ -240,7 +240,7 @@
   flex-direction: column;
   gap: 62px;
 
-  width: 272px;
+  width: 273px;
 }
 .new-posts {
   display: flex;
@@ -301,7 +301,7 @@
   width: 100%;
 }
 .search-field {
-  width: 225px;
+  width: 100%;
   padding-left: 19px;
   border: 0px;
 }
@@ -429,8 +429,8 @@
   font-family: "Open Sans Bold";
   vertical-align: top;
 }
-.article-product {
-  width: 1200px;
+.section-product {
+  max-width: 1200px;
 
   margin: auto;
   padding: 30px 15px 29px 15px;
@@ -451,7 +451,7 @@
 .product-img {
   background-color: #eff6f1;
 
-  max-width: 300px;
+  width: 100%;
   margin: auto;
 }
 .product-section {
@@ -519,7 +519,7 @@
   padding-right: 15px;
 }
 .social-network {
-  max-width: 1200px;
+  width: 100%;
   padding-top: 31px;
   padding-bottom: 31px;
 
@@ -712,7 +712,7 @@
   margin-top: 27px;
 }
 
-@media (min-width: 641px) and (max-width: 1200px), (orientation: portrait) {
+@media (min-width: 641px) and (max-width: 1200px) and (orientation: portrait) {
   .page {
     gap: 50px;
   }
@@ -755,7 +755,8 @@
     padding: 2.7em 2.2em 7.9em 2.2em;
   }
   .header-title {
-    width: 650px;
+    width: 100%;
+    max-width: 650px;
     margin: auto;
     margin-top: 104px;
     font-size: 2.5rem;
@@ -764,7 +765,7 @@
   .header-logo {
     width: 10em;
   }
-  .article-trend,
+  .section-trend,
   .content-image,
   .product-img,
   .trend-content {
@@ -787,10 +788,7 @@
   .content-box {
     flex-wrap: wrap;
   }
-  .content-news {
-    width: 39%;
-  }
-  .article-product {
+  .section-product {
     width: 100%;
     padding: 4% 5%;
   }
@@ -834,14 +832,101 @@
     line-height: 1.4rem;
   }
 }
-@media (min-width: 641px) and (max-width: 1200px), (orientation: landscape) {
+@media (min-width: 641px) and (max-width: 1200px) and (orientation: landscape) {
+  .nav {
+    display: none;
+  }
+  .burger {
+    display: block;
+    position: relative;
+    width: 23px;
+    height: 19px;
+  }
+  .burger::before,
+  .burger::after {
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    height: 3px;
+  }
+  .burger::before {
+    top: 0px;
+  }
+  .burger::after {
+    bottom: 0px;
+  }
+  .nav-burger {
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    height: 3px;
+    top: 8px;
+  }
+    .header {
+    background-image: url(../image/banner-bg-tablet.jpg);
+  }
+  .header-content {
+    width: 100%;
+    padding: 2.7em 2.2em 7.9em 2.2em;
+  }
+  .header-title {
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+    margin-top: 104px;
+    font-size: 2.5rem;
+    line-height: 3.4rem;
+  }
+  .header-logo {
+    width: 10em;
+  }
   .trend-box {
     width: calc((100% - 12px) / 4);
+  }
+  .content {
+    width: 100%;
+    gap: 5%;
+  }
+  .content-news {
+    width: 303px;
   }
 }
 @media (max-width: 640px) and (orientation: portrait) {
   .page {
     gap: 44px;
+  }
+  .nav {
+    display: none;
+  }
+  .burger {
+    display: block;
+    position: relative;
+    width: 23px;
+    height: 19px;
+  }
+  .burger::before,
+  .burger::after {
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    height: 3px;
+  }
+  .burger::before {
+    top: 0px;
+  }
+  .burger::after {
+    bottom: 0px;
+  }
+  .nav-burger {
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    height: 3px;
+    top: 8px;
   }
   .header {
     width: 100%;
@@ -864,9 +949,10 @@
   .header-title {
     font-size: 1.6rem;
     line-height: 2.25rem;
-    width: 276px;
+    max-width: 276px;
     margin-top: 45px;
   }
+  
   .conteiner-box {
     flex-direction: column;
     gap: 3px;
@@ -880,11 +966,10 @@
     padding: 0 4%;
   }
   .content-list,
-  .content-news,
   .product-box {
     width: 100%;
   }
-  .article-product {
+  .section-product {
     padding: 0 4%;
   }
   .conteiner-products {
@@ -895,6 +980,12 @@
   .product-title {
     font-size: 1rem;
   }
+  .content-box {
+    flex-direction: column;
+  }
+  .content-news {
+    width: 100%;
+  }
   .link {
     font-size: 0.9rem;
   }
@@ -903,6 +994,92 @@
   }
 }
 @media (max-width: 640px) and (orientation: landscape) {
+  .nav {
+    display: none;
+  }
+  .burger {
+    display: block;
+    position: relative;
+    width: 23px;
+    height: 19px;
+  }
+  .burger::before,
+  .burger::after {
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    height: 3px;
+  }
+  .burger::before {
+    top: 0px;
+  }
+  .burger::after {
+    bottom: 0px;
+  }
+  .nav-burger {
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    height: 3px;
+    top: 8px;
+  }
+  .header {
+    width: 100%;
+    background-image: url(../image/banner-mobile.jpg);
+  }
+  .header-content {
+    padding: 2em 0.9em 13.7em 0.9em;
+  }
+  .header-menu {
+    flex-direction: column-reverse;
+    gap: 11.6rem;
+  }
+  .burger {
+    align-self: end;
+  }
+  .header-logo { 
+    width: 269px;
+  }
+  .header-title {
+    font-size: 1.6rem;
+    line-height: 2.25rem;
+    max-width: 276px;
+    margin-top: 45px;
+  }
+  .content {
+    flex-direction: column;
+    gap: 44px;
+    padding: 0 4%;
+  }
+  .content-list,
+  .product-box {
+    width: 100%;
+  }
+  .section-product {
+    padding: 0 4%;
+  }
+  .conteiner-products {
+    flex-direction: column;
+    gap: 27px;
+  }
+  .trend-title,
+  .product-title {
+    font-size: 1rem;
+  }
+  .content-box {
+    flex-direction: column;
+  }
+  .content-news {
+    width: 100%;
+  }
+  .link {
+    font-size: 0.9rem;
+  }
+  .box-title {
+    font-size: 1rem;
+  }
   .conteiner-box {
     flex-direction: row;
     flex-wrap: wrap;
@@ -910,4 +1087,5 @@
   .trend-box {
     width: 48%;
   }
+
 }
